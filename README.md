@@ -11,11 +11,13 @@ roblox/
   search_positions/date=YYYY-MM-DD/*.parquet  # ranking de búsqueda por keyword (barrido diario)
   events/date=YYYY-MM-DD/*.parquet            # cambios de nombre / descripción / update
   tier_history/date=YYYY-MM-DD/*.parquet      # cambios de tier (hot / warm / cold) y motivo
+  quality/date=YYYY-MM-DD/*.parquet           # resultado diario de los checks de calidad
   games/date=YYYY-MM-DD/*.parquet             # dimensión como log de cambios
 fortnite/
   snapshots/date=YYYY-MM-DD/*.parquet         # métricas day (con retención) y hour
   fetch_log/date=YYYY-MM-DD/*.parquet         # cada consulta, con o sin datos
   events/date=YYYY-MM-DD/*.parquet            # islas nuevas/eliminadas, cambios de título/tags
+  quality/date=YYYY-MM-DD/*.parquet           # resultado diario de los checks de calidad
   games/date=YYYY-MM-DD/*.parquet             # dimensión como log de cambios
 ```
 
