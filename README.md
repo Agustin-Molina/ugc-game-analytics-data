@@ -6,8 +6,9 @@ No editar a mano: todo es **append-only** (cada corrida solo agrega archivos nue
 
 ```
 roblox/
-  snapshots/date=YYYY-MM-DD/*.parquet         # horario: playing, visits, favoritos, votos
+  snapshots/date=YYYY-MM-DD/*.parquet         # playing, visits, favoritos, votos (cadencia por tier)
   chart_positions/date=YYYY-MM-DD/*.parquet   # posición en cada chart de explore
+  search_positions/date=YYYY-MM-DD/*.parquet  # ranking de búsqueda por keyword (1 vez/día c/u)
   events/date=YYYY-MM-DD/*.parquet            # cambios de nombre / descripción / update
   tier_history/date=YYYY-MM-DD/*.parquet      # cambios de tier (hot / warm / cold) y motivo
   games/date=YYYY-MM-DD/*.parquet             # dimensión como log de cambios
