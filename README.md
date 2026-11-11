@@ -2,7 +2,9 @@
 
 Datos crudos recolectados automáticamente por
 [ugc-game-analytics](https://github.com/Agustin-Molina/ugc-game-analytics) con GitHub Actions.
-No editar a mano: todo es **append-only** (cada corrida solo agrega archivos nuevos).
+No editar a mano: todo es **append-only** (cada corrida solo agrega archivos nuevos). Una vez
+por semana, los archivos de cada partición de hace ≥ 2 días se juntan en
+`000000-compacted.parquet`, con el mismo contenido.
 
 ```
 roblox/
