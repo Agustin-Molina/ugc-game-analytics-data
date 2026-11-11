@@ -16,6 +16,8 @@ roblox/
   media/date=YYYY-MM-DD/*.parquet             # ícono y miniaturas (log de cambios)
   gamepasses/date=YYYY-MM-DD/*.parquet        # gamepasses: precio, a la venta (log de cambios)
   asset_checks/date=YYYY-MM-DD/*.parquet      # qué juegos se revisaron cada día
+  creator_games/date=YYYY-MM-DD/*.parquet     # juegos públicos de cada creador, con visitas
+  creator_checks/date=YYYY-MM-DD/*.parquet    # qué creadores se consultaron cada día
   tier_history/date=YYYY-MM-DD/*.parquet      # cambios de tier (hot / warm / cold) y motivo
   quality/date=YYYY-MM-DD/*.parquet           # resultado diario de los checks de calidad
   games/date=YYYY-MM-DD/*.parquet             # dimensión como log de cambios
