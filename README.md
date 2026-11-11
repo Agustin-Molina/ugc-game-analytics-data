@@ -11,7 +11,11 @@ roblox/
   snapshots/date=YYYY-MM-DD/*.parquet         # playing, visits, favoritos, votos (cadencia por tier)
   chart_positions/date=YYYY-MM-DD/*.parquet   # posición en cada chart de explore
   search_positions/date=YYYY-MM-DD/*.parquet  # ranking de búsqueda por keyword (barrido diario)
-  events/date=YYYY-MM-DD/*.parquet            # cambios de nombre / descripción / update
+  events/date=YYYY-MM-DD/*.parquet            # cambios de nombre / descripción / update /
+                                              # ícono / miniaturas
+  media/date=YYYY-MM-DD/*.parquet             # ícono y miniaturas (log de cambios)
+  gamepasses/date=YYYY-MM-DD/*.parquet        # gamepasses: precio, a la venta (log de cambios)
+  asset_checks/date=YYYY-MM-DD/*.parquet      # qué juegos se revisaron cada día
   tier_history/date=YYYY-MM-DD/*.parquet      # cambios de tier (hot / warm / cold) y motivo
   quality/date=YYYY-MM-DD/*.parquet           # resultado diario de los checks de calidad
   games/date=YYYY-MM-DD/*.parquet             # dimensión como log de cambios
