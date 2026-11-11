@@ -17,6 +17,7 @@ fortnite/
   snapshots/date=YYYY-MM-DD/*.parquet         # métricas day (con retención) y hour
   fetch_log/date=YYYY-MM-DD/*.parquet         # cada consulta, con o sin datos
   events/date=YYYY-MM-DD/*.parquet            # islas nuevas/eliminadas, cambios de título/tags
+  tier_history/date=YYYY-MM-DD/*.parquet      # cambios de tier (hot / warm / cold) y motivo
   quality/date=YYYY-MM-DD/*.parquet           # resultado diario de los checks de calidad
   games/date=YYYY-MM-DD/*.parquet             # dimensión como log de cambios
 ```
@@ -34,9 +35,10 @@ fortnite/
   `games`, historial en `tier_history`) se consultan cada hora (hot), una vez por día (warm)
   o una vez por semana (cold); la cadencia real de cada juego sale de sus `snapshot_at`.
 - `is_partial = true`: el bucket todavía no había cerrado al momento de la consulta.
-- Fortnite: por el solapamiento de ventanas (cada isla se consulta cada 5 días con ventana de
-  7) puede haber varias filas por (isla, interval, bucket_start); usar la de `snapshot_at`
-  más reciente.
+- Fortnite: cada isla se consulta según su tier (hot diario, warm cada 5 días, cold cada 7) y
+  cada consulta trae 7 días, así que puede haber varias filas por (isla, interval,
+  bucket_start); usar la de `snapshot_at` más reciente. La curva horaria de las islas hot se
+  pide solo desde la última hora ya guardada.
 
 ## Dimensiones (`games`): log append-only
 
